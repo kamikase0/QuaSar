@@ -22,7 +22,7 @@
         <q-item-label header> Essential Links </q-item-label>
 
         <EssentialLink
-          v-for="link in essentialLinks"
+          v-for="link in linksList"
           :key="link.title"
           v-bind="link"
         />
@@ -38,28 +38,8 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
+import { linksList  } from '../router/link-list';
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'las la-graduation-cap',
-    link: 'https://quasar.dev',
-  },
-  {
-    title: 'Typography',
-    caption: 'Tipos de letras en Quasar',
-    icon: 'las la-align-left',
-    link: 'typography',
-  },
-  {
-    title: 'Flex Layout',
-    caption: 'Estilos con Flex',
-    icon: 'las la-layer-group',
-    link: 'flex',
-  },
-
-];
 
 export default defineComponent({
   name: 'MainLayout',
@@ -72,7 +52,7 @@ export default defineComponent({
     const leftDrawerOpen = ref(false);
 
     return {
-      essentialLinks: linksList,
+      linksList,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
