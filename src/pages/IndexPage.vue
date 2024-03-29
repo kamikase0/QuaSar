@@ -41,4 +41,3 @@ medirTiempoAsync()
     <h1>Index</h1>
   </q-page>
 </template>
-import { error } from 'console';import { log } from 'console';

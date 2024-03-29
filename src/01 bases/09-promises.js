@@ -12,7 +12,7 @@
 
 // console.log('fin')
 
-import { getHeroById } from 'src/bases/08-imp-exp.js';
+import { getHeroById } from 'src/01 bases/08-imp-exp.js';
 
 const getHeroByIdAsync = (id) => {
   return new Promise((resolve, reject) => {
